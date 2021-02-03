@@ -11,6 +11,13 @@
 {$R 'BrazilianPortugueseHotKey.res' 'Localization\BrazilianPortuguese\BrazilianPortugueseHotKey.rc'}
 {$R 'BrazilianPortuguesePowerInformation.res' 'Localization\BrazilianPortuguese\BrazilianPortuguesePowerInformation.rc'}
 {$R 'BrazilianPortugueseScheduling.res' 'Localization\BrazilianPortuguese\BrazilianPortugueseScheduling.rc'}
+{$R 'ChineseAutorunMessage.res' 'Localization\Chinese\ChineseAutorunMessage.rc'}
+{$R 'ChineseAutoUpdate.res' 'Localization\Chinese\ChineseAutoUpdate.rc'}
+{$R 'ChineseBatteryModeLanguage.res' 'Localization\Chinese\ChineseBatteryModeLanguage.rc'}
+{$R 'ChineseBatteryStatusHint.res' 'Localization\Chinese\ChineseBatteryStatusHint.rc'}
+{$R 'ChineseHotKey.res' 'Localization\Chinese\ChineseHotKey.rc'}
+{$R 'ChinesePowerInformation.res' 'Localization\Chinese\ChinesePowerInformation.rc'}
+{$R 'ChineseScheduling.res' 'Localization\Chinese\ChineseScheduling.rc'}
 {$R 'EnglishAutorunMessage.res' 'Localization\English\EnglishAutorunMessage.rc'}
 {$R 'EnglishAutoUpdate.res' 'Localization\English\EnglishAutoUpdate.rc'}
 {$R 'EnglishBatteryModeLanguage.res' 'Localization\English\EnglishBatteryModeLanguage.rc'}
@@ -193,8 +200,13 @@ var
   Registry: TRegistry;
 
 begin
+  TLang.Fallback.Add(MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL), MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED));
+  TLang.Fallback.Add(MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_HONGKONG),    MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED));
+  TLang.Fallback.Add(MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SINGAPORE),   MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED));
+
   TLang.Fallback.Add(MAKELANGID(LANG_SPANISH, SUBLANG_SPANISH_MODERN),  MAKELANGID(LANG_SPANISH, SUBLANG_SPANISH));
   TLang.Fallback.Add(MAKELANGID(LANG_SPANISH, SUBLANG_SPANISH_MEXICAN), MAKELANGID(LANG_SPANISH, SUBLANG_SPANISH));
+
   TLang.Fallback.Add(MAKELANGID(LANG_UKRAINIAN, SUBLANG_DEFAULT),       MAKELANGID(LANG_RUSSIAN, SUBLANG_DEFAULT));
 
   Registry := TRegistry.Create;
@@ -231,6 +243,10 @@ begin
   //TLang.LanguageId := MAKELANGID(LANG_SPANISH, SUBLANG_SPANISH);          // 1034 (0x040A)
   //TLang.LanguageId := MAKELANGID(LANG_SPANISH, SUBLANG_SPANISH_MODERN);   // 3082 (0x0C0A)
   //TLang.LanguageId := MAKELANGID(LANG_SPANISH, SUBLANG_SPANISH_MEXICAN);  // 2058 (0x080A)
+  //TLang.LanguageId := MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED);  // 2052 (0x0804)
+  //TLang.LanguageId := MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL); // 1028 (0x0404)
+  //TLang.LanguageId := MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_HONGKONG);    // 3076 (0x0C04)
+  //TLang.LanguageId := MAKELANGID(LANG_CHINESE, SUBLANG_CHINESE_SINGAPORE);   // 4100 (0x1004)
 
   TMemoryDirector.SetWorkingSetSize(Round(2.5*1024*1024), 5*1024*1024);
   TMemoryDirector.OuotaLimitMinEnable := True;

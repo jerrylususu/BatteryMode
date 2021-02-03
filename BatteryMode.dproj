@@ -189,6 +189,27 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <RcCompile Include="Localization\BrazilianPortuguese\BrazilianPortugueseScheduling.rc">
             <Form>BrazilianPortugueseScheduling.res</Form>
         </RcCompile>
+        <RcCompile Include="Localization\Chinese\ChineseAutorunMessage.rc">
+            <Form>ChineseAutorunMessage.res</Form>
+        </RcCompile>
+        <RcCompile Include="Localization\Chinese\ChineseAutoUpdate.rc">
+            <Form>ChineseAutoUpdate.res</Form>
+        </RcCompile>
+        <RcCompile Include="Localization\Chinese\ChineseBatteryModeLanguage.rc">
+            <Form>ChineseBatteryModeLanguage.res</Form>
+        </RcCompile>
+        <RcCompile Include="Localization\Chinese\ChineseBatteryStatusHint.rc">
+            <Form>ChineseBatteryStatusHint.res</Form>
+        </RcCompile>
+        <RcCompile Include="Localization\Chinese\ChineseHotKey.rc">
+            <Form>ChineseHotKey.res</Form>
+        </RcCompile>
+        <RcCompile Include="Localization\Chinese\ChinesePowerInformation.rc">
+            <Form>ChinesePowerInformation.res</Form>
+        </RcCompile>
+        <RcCompile Include="Localization\Chinese\ChineseScheduling.rc">
+            <Form>ChineseScheduling.res</Form>
+        </RcCompile>
         <RcCompile Include="Localization\English\EnglishAutorunMessage.rc">
             <Form>EnglishAutorunMessage.res</Form>
         </RcCompile>

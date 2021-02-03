@@ -14,6 +14,7 @@
 #include "..\Localization\Ukrainian\UkrainianInstaller.iss"
 #include "..\Localization\BrazilianPortuguese\BrazilianPortugueseInstaller.iss"
 #include "..\Localization\Japanese\JapaneseInstaller.iss"
+#include "..\Localization\Chinese\ChineseInstaller.iss"
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"; LicenseFile: "..\LICENSE.txt"
@@ -26,5 +27,6 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; LicenseFile: ".
 Name: "ukrainian"; MessagesFile: "compiler:Languages\Ukrainian.isl"; LicenseFile: "..\Localization\Russian\License.txt"
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"; LicenseFile: "..\LICENSE.txt"
 Name: "japanese"; MessagesFile: "compiler:Languages\Japanese.isl"; LicenseFile: "..\LICENSE.txt"
+Name: "chinese"; MessagesFile: "..\Localization\Chinese\Unofficial\ChineseSimplified.isl"; LicenseFile: "..\LICENSE.txt"
 
 #endif
